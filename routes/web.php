@@ -19,6 +19,14 @@ use App\Http\Controllers\ParcelaController;
 |
 */
 
+Route::resources([
+    'clientes' => ClienteController::class,
+    'produtos' => ProdutoController::class,
+    'vendas' => VendaController::class,
+    'itens' => ItemVendaController::class,
+    'parcelas' => ParcelaController::class,
+]);
+
 Route::get('/', function () {
     return view('welcome');
 });
